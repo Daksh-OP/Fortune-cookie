@@ -1,0 +1,55 @@
+body {
+    background: #1b263b;
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: #415a77;
+    padding: 2rem 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.20), 0 1.5px 6px rgba(65,90,119,0.12);
+    text-align: center;
+}
+
+h1 {
+    font-weight: 700;
+    color: #e0e1dd;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.fortune-box {
+    background: #778da9;
+    color: #f5eea5;
+    border: 2px dashed #f5eea5;
+    border-radius: 10px;
+    padding: 1.2rem 1rem;
+    min-height: 48px;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    transition: background 0.2s, color 0.2s;
+}
+
+.cookie-btn {
+    background: #e0e1dd;
+    color: #415a77;
+    border: none;
+    padding: 0.7rem 2.2rem;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 1px 8px rgba(224,225,221,0.12);
+    transition: background 0.2s, transform 0.1s;
+}
+
+.cookie-btn:hover {
+    background: #f5eea5;
+    color: #1b263b;
+    transform: scale(1.05);
+}
