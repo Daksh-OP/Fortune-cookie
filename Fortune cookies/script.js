@@ -66,7 +66,24 @@ const fortunes = [
     "You will find a coin on the ground and feel rich for 5 seconds."
 ];
 
-document.getElementById('getFortuneBtn').addEventListener('click', () => {
-    const fortune = fortunes[Math.floor(Math.random() * fortunes.length)];
-    document.getElementById('fortune').textContent = fortune;
+// Elements
+const fortuneBox = document.getElementById('fortune');
+const fortuneBtn = document.getElementById('getFortuneBtn');
+
+// Check if user already has a fortune stored
+let savedFortune = localStorage.getItem('myFortune');
+if (savedFortune) {
+    fortuneBox.textContent = savedFortune;
+    fortuneBtn.disabled = true;
+    fortuneBtn.textContent = "🥠 Cookie Opened";
+} 
+
+fortuneBtn.addEventListener('click', () => {
+    if (!localStorage.getItem('myFortune')) {
+        const fortune = fortunes[Math.floor(Math.random() * fortunes.length)];
+        fortuneBox.textContent = fortune;
+        localStorage.setItem('myFortune', fortune);
+        fortuneBtn.disabled = true;
+        fortuneBtn.textContent = "🥠 Cookie Opened";
+    }
 });
